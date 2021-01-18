@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/darkest_blue">
+
+
+            <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_arrow_right"
+            android:rotation="180"
+            android:layout_marginLeft="@dimen/_5sdp"
+            />
+
+
+        <com.ibring_driver.provider.Utils.ClanProTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car Details"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ccServices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/_12sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/cc_main"
+        android:padding="@dimen/_10sdp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlService"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/gray_fill_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/ivServices"
+                android:layout_width="@dimen/_25sdp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/service_type"
+                android:tint="@color/cancel_ride_color"
+                android:layout_centerVertical="true"
+                />
+
+            <Spinner
+                android:id="@+id/sp_service"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/ivServices"
+                android:layout_marginTop="8dp"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSubService"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/rlService"
+            android:background="@drawable/gray_fill_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/ivSubServices"
+                android:layout_width="@dimen/_25sdp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/service_type"
+                android:tint="@color/cancel_ride_color"
+                android:layout_centerVertical="true"
+                />
+
+            <Spinner
+                android:id="@+id/sp_sub_service"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/ivSubServices"
+                android:layout_marginTop="8dp"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_option"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:layout_marginRight="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ccServices"
+        android:padding="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cc_food"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/_5sdp">
+
+            <RelativeLayout
+                android:id="@+id/rlVehicleName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/gray_fill_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <ImageView
+                    android:id="@+id/ivVehicleName"
+                    android:layout_width="@dimen/_25sdp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/car"
+                    android:layout_centerVertical="true"
+                    />
+
+                <com.ibring_driver.provider.Utils.ClanProEditText
+                    android:id="@+id/etVehicleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@+id/ivVehicleName"
+                    android:background="@android:color/transparent"
+                    android:hint="Vehicle Name"
+                    android:inputType="text"
+                  android:textColor="@color/colorPrimary"
+                  android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-"
+                  android:textColorHint="@color/colorPrimary"
+                  android:textAppearance="?android:textAppearanceSmall"
+                  />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlVehicleNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/rlVehicleName"
+                android:background="@drawable/gray_fill_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <ImageView
+                    android:id="@+id/ivVehicleNumber"
+                    android:layout_width="@dimen/_25sdp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/car"
+                    android:layout_centerVertical="true"
+                    />
+
+                <com.ibring_driver.provider.Utils.ClanProEditText
+                    android:id="@+id/etVehicleNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@+id/ivVehicleNumber"
+                    android:background="@android:color/transparent"
+                    android:hint="Vehicle Number"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimary"
+                    android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cc_carDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/_5sdp">
+
+
+            <RelativeLayout
+                android:id="@+id/rlCabType"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/gray_fill_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_cabType"
+                    android:layout_width="@dimen/_25sdp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/car"
+                    android:layout_centerVertical="true"
+                    />
+
+                <Spinner
+                    android:id="@+id/SpCabType"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@+id/iv_cabType"
+                    android:layout_marginTop="8dp"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPlate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/rlCabType"
+                android:background="@drawable/gray_fill_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_plate"
+                    android:layout_width="@dimen/_25sdp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/car_plate_number"
+                    android:layout_centerVertical="true"
+                    />
+
+                <com.ibring_driver.provider.Utils.ClanProEditText
+                    android:id="@+id/etNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/iv_plate"
+                    android:background="@android:color/transparent"
+                    android:hint="Car Plate Number"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:textColor="@color/colorPrimary"
+                    android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlBrand"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/rlPlate"
+                android:background="@drawable/gray_fill_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_brand"
+                    android:layout_width="@dimen/_25sdp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/car"
+                    android:layout_centerVertical="true"
+                    />
+
+                <Spinner
+                    android:id="@+id/SpBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textColor="@color/lighter_gray"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@+id/iv_brand"
+                    android:layout_marginTop="8dp"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlModel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/rlBrand"
+                android:background="@drawable/gray_fill_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_model"
+                    android:layout_width="@dimen/_25sdp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/car"
+                    android:layout_centerVertical="true"
+                    />
+
+                <Spinner
+                    android:id="@+id/SpModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textColor="@color/lighter_gray"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@+id/iv_model"
+                    android:layout_marginTop="8dp"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/rlModel"
+                android:background="@drawable/gray_fill_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_capacity"
+                    android:layout_width="@dimen/_25sdp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/car"
+                    android:layout_centerVertical="true"
+                    />
+
+                <Spinner
+                    android:id="@+id/SpCapacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textColor="@color/lighter_gray"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@+id/iv_capacity"
+                    android:layout_marginTop="8dp"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlColor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/rlCapacity"
+                android:background="@drawable/gray_fill_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_color"
+                    android:layout_width="@dimen/_25sdp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/car"
+                    android:layout_centerVertical="true"
+                    />
+
+                <Spinner
+                    android:id="@+id/SpColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textColor="@color/lighter_gray"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@+id/iv_color"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <RelativeLayout
+        android:id="@+id/lnrRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/yellow_background"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cc_option">
+
+
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:text="SIGN UP"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ivEnter"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/enter"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+        <TextView
+        android:id="@+id/tvSignup11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="3dp"
+        android:layout_marginRight="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/lnrRegister"
+        android:text="Already have an account?"
+        android:textColor="@color/dark_gray"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+        android:id="@+id/tvLogin11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:padding="3dp"
+        android:text="Login"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/tvSignup11"
+        app:layout_constraintTop_toBottomOf="@+id/lnrRegister" />
+
+    <ImageView
+        android:layout_width="405dp"
+        android:layout_height="180dp"
+        android:src="@drawable/back_curve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

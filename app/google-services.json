@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "222657633966",
+    "firebase_url": "https://ibringdriverapp.firebaseio.com",
+    "project_id": "ibringdriverapp",
+    "storage_bucket": "ibringdriverapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222657633966:android:e3dcdfe164a9addd05573f",
+        "android_client_info": {
+          "package_name": "com.ibring_driver.provider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222657633966-aoo1279p77qvhm7vg8b37mngga75rm20.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibring_driver.provider",
+            "certificate_hash": "5491343d97a2c012f16cda8aa507c88915cb0caf"
+          }
+        },
+        {
+          "client_id": "222657633966-sl13entd296c15t1rk78jri2u23bflk5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibring_driver.provider",
+            "certificate_hash": "a6e938423526007514a004c7ccf52e04dad0e6b1"
+          }
+        },
+        {
+          "client_id": "222657633966-u0si8svfiu3me9tburgncrq1pob08da8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoDdlFKvFYO9ZatLB_GCpBUTA3JOyxmNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222657633966-u0si8svfiu3me9tburgncrq1pob08da8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

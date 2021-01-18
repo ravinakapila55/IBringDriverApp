@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/background_curve">
+
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/new_logo_yellow"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_main"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_110sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <com.ibring_driver.provider.Utils.ClanProTextView
+                android:id="@+id/tvLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Login"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/colorBlue"
+                android:padding="5dp"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rlFb"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+                android:layout_marginTop="20dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:background="@drawable/gray_fill_background"
+                android:layout_marginRight="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivFacebook"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/fb_icon"/>
+
+                <com.ibring_driver.provider.Utils.ClanProTextView
+                    android:id="@+id/txtFb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Continue with Facebook"
+                    android:textColorHint="@color/dark_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivFacebook"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlFb"
+                android:layout_marginTop="20dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:background="@drawable/gray_fill_background"
+                android:layout_marginRight="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivGoogle1"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/google"/>
+
+                <com.ibring_driver.provider.Utils.ClanProTextView
+                    android:id="@+id/tvGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Continue with Google"
+                    android:layout_toRightOf="@+id/ivGoogle1"
+                    android:textColor="@color/dark_gray"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlGoogle"
+                android:layout_marginTop="20dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:background="@drawable/gray_fill_background"
+                android:layout_marginRight="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivEmail"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/email_red"/>
+
+                <com.ibring_driver.provider.Utils.ClanProTextView
+                    android:id="@+id/txtpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Continue with Email"
+                    android:layout_toRightOf="@+id/ivEmail"
+                    android:textColor="@color/dark_gray"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"/>
+
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

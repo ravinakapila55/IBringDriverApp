@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.ibring_driver.provider.Activity.EditProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorBlue"
+        android:elevation="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:src="@drawable/back_icon"
+            android:tint="@color/white" />
+
+        <com.ibring_driver.provider.Utils.ClanProTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="Profile"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end">
+
+            <com.ibring_driver.provider.Utils.ClanProTextView
+                android:id="@+id/lblSave"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:gravity="center"
+                android:text="@string/edit"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:background="@color/colorBlue"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@color/colorBlue"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_dummy_user" />
+
+                    <com.ibring_driver.provider.Utils.ClanProTextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|bottom">
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_110sdp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:elevation="@dimen/_15sdp"
+                    card_view:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.ibring_driver.provider.Utils.ClanProTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/first_name"
+                                    android:textColor="@color/user_name"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                                <com.ibring_driver.provider.Utils.ClanProEditText
+                                    android:id="@+id/first_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@null"
+                                    android:enabled="false"
+                                    android:hint="@string/first_name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapWords"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorBlue"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.ibring_driver.provider.Utils.ClanProTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/last_name"
+                                    android:textColor="@color/user_name"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                                <com.ibring_driver.provider.Utils.ClanProEditText
+                                    android:id="@+id/last_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@null"
+                                    android:enabled="false"
+                                    android:hint="@string/last_name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapSentences"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorBlue"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:id="@+id/first_name_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@color/user_name"
+                            android:visibility="gone" />
+
+
+                        <View
+                            android:id="@+id/last_name_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@color/user_name"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <com.ibring_driver.provider.Utils.ClanProTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/phone_number"
+                                android:textColor="@color/user_name"
+                                android:textSize="@dimen/_12sdp" />
+
+
+                            <com.ibring_driver.provider.Utils.ClanProEditText
+                                android:id="@+id/mobile_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:imeOptions="actionDone"
+                                android:inputType="phone"
+                                android:maxLines="1"
+                                android:textColor="@color/colorBlue"
+                                android:textSize="@dimen/_12sdp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/mobile_no_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@color/user_name"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <com.ibring_driver.provider.Utils.ClanProTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/about"
+                                android:textColor="@color/user_name"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <com.ibring_driver.provider.Utils.ClanProEditText
+                                android:id="@+id/desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:gravity="start"
+                                android:hint="@string/write_something"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:minLines="2"
+                                android:padding="@dimen/_6sdp"
+                                android:textColor="@color/colorBlue"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </LinearLayout>
+
+
+                        <com.ibring_driver.provider.Utils.ClanProTextView
+                            android:id="@+id/tvMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="More Details"
+                            android:textSize="18sp"
+                            android:layout_gravity="end"
+                            android:textStyle="italic"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/ccMore"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:background="@android:color/transparent"
+                            xmlns:android="http://schemas.android.com/apk/res/android">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/white_curve"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                >
+
+                                <com.ibring_driver.provider.Utils.ClanProTextView
+                                    android:id="@+id/tvLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    android:gravity="center"
+                                    android:textSize="16sp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:textColor="@color/black"
+                                    android:padding="8dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Vehicle &amp; Service Details"/>
+
+
+                                <ImageView
+                                    android:id="@+id/ivCross"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/cancel_req_icon"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"/>
+
+                                <com.ibring_driver.provider.Utils.ClanProTextView
+                                    android:id="@+id/tvServiceTypeLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+                                    android:text="Service Type"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:textColor="@color/dark_gray"/>
+
+
+                                <com.ibring_driver.provider.Utils.ClanProTextView
+                                    android:id="@+id/tvServiceType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Taxi"
+                                    android:textColor="@color/black"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    android:layout_marginRight="@dimen/_10sdp"/>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/CC_CabDetails"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvServiceTypeLabel"
+                                    >
+
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCabTypeLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:text="Cab Type"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:textColor="@color/dark_gray"/>
+
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCabType"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="MIni"
+                                        android:textColor="@color/black"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:layout_marginRight="@dimen/_10sdp"/>
+
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCarNameLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        android:text="Car Name"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvCabTypeLabel"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:textColor="@color/dark_gray"/>
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCarName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Honda"
+                                        android:textColor="@color/black"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvCabType"
+                                        android:layout_marginRight="@dimen/_10sdp"/>
+
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCarNumberLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        android:text="Car NUmber"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvCarNameLabel"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:textColor="@color/dark_gray"/>
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCarNumber"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_8sdp"
+
+                                        android:text="83763764"
+                                        android:textColor="@color/black"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvCarName"
+                                        android:layout_marginRight="@dimen/_10sdp"/>
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCarBrandLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:text="Car Brand"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvCarNumberLabel"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:textColor="@color/dark_gray"/>
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCarBrand"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="XUV"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:textColor="@color/black"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvCarNumber"
+                                        android:layout_marginRight="@dimen/_10sdp"/>
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCarColorLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        android:layout_marginTop="@dimen/_8sdp"
+
+                                        android:text="Car Color"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvCarBrandLabel"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:textColor="@color/dark_gray"/>
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvCarColor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Black"
+                                        android:textColor="@color/black"
+                                        android:layout_marginTop="@dimen/_8sdp"
+
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvCarBrand"
+                                        android:layout_marginRight="@dimen/_10sdp"/>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/CC_VehicleDetails"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    app:layout_constraintTop_toBottomOf="@+id/CC_CabDetails"
+                                    >
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvVehicleNumberLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:text="Vehicle Number"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:textColor="@color/dark_gray"/>
+
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvVehicleNumber"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="df5688383"
+                                        android:textColor="@color/black"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:layout_marginRight="@dimen/_10sdp"/>
+
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvVehicleNameLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        android:text="Vehicle Number"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvVehicleNumberLabel"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:textColor="@color/dark_gray"/>
+
+
+                                    <com.ibring_driver.provider.Utils.ClanProTextView
+                                        android:id="@+id/tvVehicleName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="93834nf"
+                                        app:layout_constraintTop_toBottomOf="@id/tvVehicleNumber"
+                                        android:textColor="@color/black"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        android:layout_marginRight="@dimen/_10sdp"/>
+
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <com.ibring_driver.provider.Utils.ClanProTextView
+                    android:id="@+id/changePasswordTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:text="@string/change_password"
+                    android:textColor="@color/user_name"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

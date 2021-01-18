@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cc_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@drawable/background_curve">
+
+
+    <ImageView
+    android:layout_width="@dimen/_100sdp"
+    android:layout_height="@dimen/_100sdp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:src="@drawable/new_logo_yellow"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_380sdp"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginTop="125dp"
+    android:layout_marginLeft="@dimen/_30sdp"
+    android:layout_marginRight="@dimen/_30sdp"
+    app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+        android:id="@+id/card_main"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_280sdp"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:padding="5dp"/>
+
+        <RelativeLayout
+        android:id="@+id/rlEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/gray_fill_background"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:layout_marginRight="10dp">
+
+
+       <ImageView
+       android:id="@+id/ivEmail"
+       android:layout_width="20dp"
+       android:layout_height="20dp"
+       android:visibility="gone"
+       android:src="@drawable/email"/>
+
+       <com.ibring_driver.provider.Utils.ClanProEditText
+       android:id="@+id/email"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textSize="14sp"
+       android:hint="Email Address"
+       android:textColorHint="@color/dark_gray"
+       android:layout_toRightOf="@+id/ivEmail"
+       android:inputType="textEmailAddress"
+       android:background="@android:color/transparent"
+       android:textColor="@color/dark_gray"
+       android:layout_marginLeft="10dp"/>
+
+       </RelativeLayout>
+
+        <RelativeLayout
+        android:id="@+id/rlpswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlEmail"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gray_fill_background"
+        android:layout_marginRight="10dp">
+
+
+                <ImageView
+                    android:id="@+id/ivpswd"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    android:src="@drawable/password"/>
+
+                <com.ibring_driver.provider.Utils.ClanProEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:hint="Password"
+                    android:textColorHint="@color/dark_gray"
+                    android:layout_toRightOf="@+id/ivpswd"
+                    android:inputType="textPassword"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginLeft="10dp"/>
+
+                <ImageView
+                    android:id="@+id/ivEye"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/visible_eye"/>
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                android:id="@+id/rlLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlpswd"
+                android:layout_marginTop="35dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:padding="12dp"
+                android:background="@drawable/yellow_background"
+                android:layout_marginRight="10dp">
+
+                   <TextView
+                    android:id="@+id/signInBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="LOG IN"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"/>
+
+
+                   <ImageView
+                    android:id="@+id/ivEnter"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/enter"
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="15dp"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+            android:id="@+id/forgetPasswordTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="15dp"
+            android:text="Forgot Password ?"
+            android:textColor="@color/dark_gray"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/rlLogin"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="10dp"/>
+
+
+            <TextView
+            android:id="@+id/tvOR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="18dp"
+            android:text="OR"
+            android:visibility="gone"
+            android:textColor="@color/dark_gray"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/forgetPasswordTxt"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="10dp"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/tvOR">
+
+                <ImageView
+                    android:id="@+id/ivFb"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="110dp"
+                    android:src="@drawable/facebook"/>
+
+                <ImageView
+                    android:id="@+id/ivGoogle"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintLeft_toRightOf="@+id/ivFb"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/google"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+        android:id="@+id/tvSignupLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:text="Are you a new user?"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="5dp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@+id/card_main"
+        />
+
+
+       <TextView
+       android:id="@+id/tvSignup"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="16sp"
+       android:layout_marginTop="20dp"
+       android:text="Sign Up"
+       android:textColor="@color/red"
+       android:padding="5dp"
+       android:textStyle="bold"
+       android:layout_marginRight="40dp"
+       app:layout_constraintTop_toBottomOf="@+id/card_main"
+       app:layout_constraintLeft_toRightOf="@+id/tvSignupLabel"
+       />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
